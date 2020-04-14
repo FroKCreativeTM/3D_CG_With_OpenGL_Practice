@@ -57,6 +57,8 @@ void LineDrawWithDDA(int x1, int y1, int x2, int y2)
 3. round같은 자원을 많이 쓰는 함수를 줄인다.
 
 이로써 정밀하면서도 빠른 함수를 만들 수 있다.
+
+단 아래의 midpoint algorithm은 좀 더 개선될 수 있다.
 */
 void MidpointLine(int x1, int y1, int x2, int y2)
 {
