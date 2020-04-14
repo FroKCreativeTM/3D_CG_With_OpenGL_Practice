@@ -62,19 +62,25 @@ void MidpointLine(int x1, int y1, int x2, int y2)
 {
 	int dx, dy, incrE, incrNE, D, x, y;
 	dx = x2 - x1; dy = y2 - y1;
-	D = 2 * dy - dx;
-	incrE = 2 * dy;
-	incrNE = 2 * dy - 2 * dx;
-	x = x1; y = y1;
-	// DrawPixel(x, y);
-
-	while (x < x2)
-	{
-		if (D <= 0)
-		{
-			D += incrE;
-
-		}
+	D = 2 * dy - dx;					// 결정 변수값을 초기화
+	incrE = 2 * dy;						// 동쪽 화소 선택 시 증가분
+	incrNE = 2 * dy - 2 * dx;			// 동북쪽 화소 선택 시 증가분
+	x = x1; y = y1;						// 첫 화소
+	// DrawPixel(x, y);					// 첫 화소 그리기
+										// 
+	while (x < x2)						// 
+	{									// 
+		if (D <= 0)						// 결정 변수가 음수, 동쪽 화소 선택
+		{								// 
+			D += incrE;					// 결정 변수 증가 
+			x++;						// 다음 화소는 동쪽
+		}								// 
+		else							// 결정 변수가 양수, 동북쪽 화소 선택
+		{								// 
+			D += incrNE;				// 결정 변수 증가
+			x++; y++;					// 다음 화소는 동북쪽
+		}								// 
+		// DrawPixel(x, y);				// 
 	}
 }
 
