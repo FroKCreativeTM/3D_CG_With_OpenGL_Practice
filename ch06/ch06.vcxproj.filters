@@ -21,5 +21,8 @@
     <ClCompile Include="Solar_system.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="view_translation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
