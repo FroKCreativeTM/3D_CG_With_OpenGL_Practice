@@ -18,5 +18,8 @@
     <ClCompile Include="projection_by_viewport_division.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="auto_window_size.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
